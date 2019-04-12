@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEDBA751-1684-4298-B8F4-67FFCE0A7211}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyAIO</RootNamespace>
+    <AssemblyName>EasyAIO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Open_eVision_NetApi_2_2, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Open_eVision_NetApi_2_2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\AbstractFactory.cs" />
+    <Compile Include="Common\MPicBoxConfig\CircleConfig.cs" />
+    <Compile Include="Common\FloatValueControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\FloatValueControl.Designer.cs">
+      <DependentUpon>FloatValueControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\NumTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\NumTextBox.designer.cs">
+      <DependentUpon>NumTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindCircle\FindCircleFactory.cs" />
+    <Compile Include="FindCircle\FindCircleConfig.cs" />
+    <Compile Include="FindCircle\FindCircleEvent.cs" />
+    <Compile Include="FindCircle\FindCircleFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindCircle\FindCircleFrm.Designer.cs">
+      <DependentUpon>FindCircleFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindLine\FindLineConfig.cs" />
+    <Compile Include="FindLine\FindLineEvent.cs" />
+    <Compile Include="FindLine\FindLineFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindLine\FindLineFrm.Designer.cs">
+      <DependentUpon>FindLineFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindPoint\FindPointConfig.cs" />
+    <Compile Include="FindPoint\FindPointEvent.cs" />
+    <Compile Include="FindPoint\FindPointFactory.cs" />
+    <Compile Include="FindPoint\FindPointFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindPoint\FindPointFrm.Designer.cs">
+      <DependentUpon>FindPointFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindRect\FindRectFactory.cs" />
+    <Compile Include="FindRect\FindRectConfig.cs" />
+    <Compile Include="FindRect\FindRectEvent.cs" />
+    <Compile Include="FindRect\FindRectFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindRect\FindRectFrm.Designer.cs">
+      <DependentUpon>FindRectFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MPicBoxConfig\LineConfig.cs" />
+    <Compile Include="Common\MPicBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\MPicBox.designer.cs">
+      <DependentUpon>MPicBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PicBoxList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\PicBoxList.Designer.cs">
+      <DependentUpon>PicBoxList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindLine\FindLineFactory.cs" />
+    <Compile Include="Get2LIntersection\Get2LIntersectionConfig.cs" />
+    <Compile Include="Get2LIntersection\Get2LIntersectionEvent.cs" />
+    <Compile Include="Get2LIntersection\Get2LIntersectionFactory.cs" />
+    <Compile Include="Get2LIntersection\Get2LIntersectionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Get2LIntersection\Get2LIntersectionFrm.Designer.cs">
+      <DependentUpon>Get2LIntersectionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Get2PointDistance\Get2PDistConfig.cs" />
+    <Compile Include="Get2PointDistance\Get2PDistEvent.cs" />
+    <Compile Include="Get2PointDistance\Get2PDistFactory.cs" />
+    <Compile Include="Get2PointDistance\Get2PDistFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Get2PointDistance\Get2PDistFrm.Designer.cs">
+      <DependentUpon>Get2PDistFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetPLDistance\GetPLDistConfig.cs" />
+    <Compile Include="GetPLDistance\GetPLDistEvent.cs" />
+    <Compile Include="GetPLDistance\GetPLDistFactory.cs" />
+    <Compile Include="GetPLDistance\GetPLDistFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetPLDistance\GetPLDistFrm.Designer.cs">
+      <DependentUpon>GetPLDistFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\ICamera.cs" />
+    <Compile Include="Main\NewNameFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\NewNameFrm.Designer.cs">
+      <DependentUpon>NewNameFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shape\ShapeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shape\ShapeFrm.Designer.cs">
+      <DependentUpon>ShapeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImgPreprocess\ImgPreprocessFactory.cs" />
+    <Compile Include="ImgSource\ImgSourceFactory.cs" />
+    <Compile Include="Matcher\MactherFactory.cs" />
+    <Compile Include="Matcher\MatcherConfig.cs" />
+    <Compile Include="Matcher\MatcherEvent.cs" />
+    <Compile Include="Matcher\MatcherFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matcher\MatcherFrm.Designer.cs">
+      <DependentUpon>MatcherFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\MoudleFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MoudleFrm.Designer.cs">
+      <DependentUpon>MoudleFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Object\ObjectFactory.cs" />
+    <Compile Include="Object\ObjFeatureFilter.cs" />
+    <Compile Include="ImgPreprocess\ImgPreprocessEditFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImgPreprocess\ImgPreprocessEditFrm.Designer.cs">
+      <DependentUpon>ImgPreprocessEditFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImgPreprocess\CloseConfig.cs" />
+    <Compile Include="Base\BaseEvent.cs" />
+    <Compile Include="ImgPreprocess\DilateConfig.cs" />
+    <Compile Include="ImgPreprocess\ErodeConfig.cs" />
+    <Compile Include="ImgPreprocess\GainOffsetConfig.cs" />
+    <Compile Include="ImgPreprocess\ImgConfigBase.cs" />
+    <Compile Include="ImgPreprocess\ImgPreProcessEvent.cs" />
+    <Compile Include="ImgPreprocess\ImgPreProcessConfig.cs" />
+    <Compile Include="ImgPreprocess\MedianConfig.cs" />
+    <Compile Include="ImgPreprocess\OpenConfig.cs" />
+    <Compile Include="ImgPreprocess\RoataeConfig.cs" />
+    <Compile Include="Object\ObjectConfig.cs" />
+    <Compile Include="Object\ObjectEvent.cs" />
+    <Compile Include="Object\ObjectFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Object\ObjectFrm.Designer.cs">
+      <DependentUpon>ObjectFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\ResultsDetermine.cs" />
+    <Compile Include="Main\Result.cs" />
+    <Compile Include="Main\ResultFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\ResultFrm.Designer.cs">
+      <DependentUpon>ResultFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImgSource\ImgSourceConfig.cs" />
+    <Compile Include="ImgSource\ImgSourceFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImgSource\ImgSourceFrm.Designer.cs">
+      <DependentUpon>ImgSourceFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\MTabControl.Designer.cs">
+      <DependentUpon>MTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\SaveTaskGroup.cs" />
+    <Compile Include="Common\BinarySerializer.cs" />
+    <Compile Include="Main\ImgDictionary.cs" />
+    <Compile Include="ImgSource\ImgSourceEvent.cs" />
+    <Compile Include="Common\MPicBoxConfig\PointConfig.cs" />
+    <Compile Include="Ocr\OcrFactory.cs" />
+    <Compile Include="Ocr\OcrConfig.cs" />
+    <Compile Include="Ocr\OcrEvent.cs" />
+    <Compile Include="Ocr\OcrFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ocr\OcrFrm.Designer.cs">
+      <DependentUpon>OcrFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseConfig.cs" />
+    <Compile Include="ImgPreprocess\SobelConfig.cs" />
+    <Compile Include="Main\Task.cs" />
+    <Compile Include="Base\ToolEditBaseFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\ToolEditBaseFrm.Designer.cs">
+      <DependentUpon>ToolEditBaseFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImgPreprocess\ThresholdConfig.cs" />
+    <Compile Include="Main\ToolGroupEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\ToolGroupEdit.Designer.cs">
+      <DependentUpon>ToolGroupEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\ToolSelectFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\ToolSelectFrm.Designer.cs">
+      <DependentUpon>ToolSelectFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ValueControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ValueControl.Designer.cs">
+      <DependentUpon>ValueControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MPicBoxConfig\RectConfig.cs" />
+    <Compile Include="Common\MPicBoxConfig\RoiConfig.cs" />
+    <Compile Include="Common\MPicBoxConfig\SaveConfig.cs" />
+    <Compile Include="Common\StrAttribute.cs" />
+    <Compile Include="Shape\ShapeConfig.cs" />
+    <Compile Include="Shape\ShapeEvent.cs" />
+    <Compile Include="Shape\ShapeFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\FloatValueControl.resx">
+      <DependentUpon>FloatValueControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindCircle\FindCircleFrm.resx">
+      <DependentUpon>FindCircleFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindLine\FindLineFrm.resx">
+      <DependentUpon>FindLineFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindPoint\FindPointFrm.resx">
+      <DependentUpon>FindPointFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindRect\FindRectFrm.resx">
+      <DependentUpon>FindRectFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\PicBoxList.resx">
+      <DependentUpon>PicBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Get2LIntersection\Get2LIntersectionFrm.resx">
+      <DependentUpon>Get2LIntersectionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Get2PointDistance\Get2PDistFrm.resx">
+      <DependentUpon>Get2PDistFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetPLDistance\GetPLDistFrm.resx">
+      <DependentUpon>GetPLDistFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\NewNameFrm.resx">
+      <DependentUpon>NewNameFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shape\ShapeFrm.resx">
+      <DependentUpon>ShapeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImgPreprocess\ImgPreprocessEditFrm.resx">
+      <DependentUpon>ImgPreprocessEditFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImgSource\ImgSourceFrm.resx">
+      <DependentUpon>ImgSourceFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matcher\MatcherFrm.resx">
+      <DependentUpon>MatcherFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MoudleFrm.resx">
+      <DependentUpon>MoudleFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\ObjectFrm.resx">
+      <DependentUpon>ObjectFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ocr\OcrFrm.resx">
+      <DependentUpon>OcrFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\ToolEditBaseFrm.resx">
+      <DependentUpon>ToolEditBaseFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\ResultFrm.resx">
+      <DependentUpon>ResultFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\ToolGroupEdit.resx">
+      <DependentUpon>ToolGroupEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\ToolSelectFrm.resx">
+      <DependentUpon>ToolSelectFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ValueControl.resx">
+      <DependentUpon>ValueControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
